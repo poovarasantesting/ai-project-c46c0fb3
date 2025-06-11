@@ -1,15 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
-import Register from "./pages/Register";
+import { LoginForm } from "@/components/LoginForm";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/register" />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50 dark:bg-gray-900">
+      <LoginForm />
       <Toaster />
-    </BrowserRouter>
+    </div>
   );
 }
